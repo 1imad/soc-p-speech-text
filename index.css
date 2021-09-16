@@ -1,0 +1,9 @@
+.no-browser-support {
+    display: none;
+}
+
+.btn-mic {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

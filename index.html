@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to text</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAB/klEQVRoge2Zu0oDQRSGB4vU1qYSbFVUUIyWvoKFIF7AwsKgQSFFgnZeSmsvjZ34DCJGfANrBdkgXhAVKy+fhUccdTe7k+xNMl+TwM7O+T/O7NlilbJYLEYAGWADqJI+HGANyAQRWU84bBBWg4g4sngwjA6HCZCTbE6QxQDEkKsuvPK1JBEmCqxI2rAiacNYBKjE8J6oRC4SE42Pf/seSRgrkjaaV8SOXzPs+P33WJG00bwihuO34nJvFdgDJoC28FT+Bq05tQxFjn/de+my5gzYBAbCyGe+sA6A3RrSr8B4aPkiFhn1kDiU3xdgLJR8EYu0Slidslwrap2ZbDhflCKy/4mUeAcWfl37knkDphrKF4NISUqcAn+mJlDWZKbrzheDSAfwLGW2PWRKmsxMXfmiFpEaw8CjlNrxkFnSjuCccb44RKROEJlFTSZvlC8uEak1ZCgzn0oRqad3ZivAMUuniNTMAQ8+nSmgEWTT2EWk7qAm49WZgtaVot+GiYhI7T7gzqczs5rMSq3Nvr4h5iJN7V2/H7j36Uxek1n22miNdOElo399HnETyfAp47jtmhA/ZIBO4Fq7ftTYOYgYoJfvZ2YLaHGRAHhKOqsvQA9wK4H3XST+h4hSSgHdwE2No3eQdMbAAF3AlYvEFdCedD4jgKw8KxfAufzPKqXUBxrPgjgzbmrlAAAAAElFTkSuQmCC">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="m-5">
+                <h4>Voice Notes</h4>
+                <p class="page-description">This app allows you to take voice or text notes.</p>
+                <hr>
+                <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This
+                    Demo In Google Chrome.</h3>
+                <form class="position-relative" id="form">
+                    <button class="btn btn-info btn-mic" id="rec"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA3ElEQVRIie2UQQ7BQBSGJyJdNVZYOAKXoEcQV2EhNlio6+AaWDpBu24doJ/NL5nQ1IxYEP2TyfS9vvd/k5dOjfkLAQGwBVIgAWIg+CQg5lnxJwGJTKfATM+JS2/TkdHTfinJVarhCHhbNeBLAcBVn2KoVKq9b4wZ2DmgpdrcmQqc1TRUXHbRNnoXKT75ANZq2ikOBEkefxXAQbVLH0DXGtO8om6hmgxoOwPUPAEKGeyBERBqRdbJC2DsZf4AyUvmf1f2trkF6QAr4GgZH4Gl91gcYAD49Pz+Ta71UjebU0ZFWnD3jgAAAABJRU5ErkJggg=="></button>
+                    <textarea class="form-control" id="notes" rows="6" required
+                        placeholder="Type Something!"></textarea>
+                    <p id="recording-instructions">Press the
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA2klEQVRIie2UMQ6CQBBFX4yhIlZq4RH0EuoRjFfRwtiohXgd9Rpq6QmgBg+AFnwiAQKsUmj0J5tlhpl55MMCvyIL2AEe4AKOcrXJAe6p5dQJcDV0Bsx17VZpbFYE9LRfc3KFalQEvKw/4HMBN6JP0Vbsae8Dg1SupdrABHxR01Bx3kHb6t5Y8dkEsFHTXrEliEv2V3FU7coE0OVp06KgbqkaH2ibAACmQKgBB2BE9E5sIlviJw+BienwJCQg63+8/HeGx+oAa+CUGHwi8tzYljLFgMr6/pP8V6keX98/PlKH4bUAAAAASUVORK5CYII=">
+                        button and allow access.
+                    </p>
+                    <div class="text-end mt-2">
+                        <button class="btn btn-success" type="submit">Submit</button>
+                        <button class="btn btn-warning" id="clear" type="button">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="m-5">
+                <h4>Your Notes</h4>
+                <div id="notes-output"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
