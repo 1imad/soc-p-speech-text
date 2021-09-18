@@ -53,6 +53,7 @@
         };
 
         recognition.onstart = function () {
+            noteContent = '';
             instructions.innerHTML = 'Voice recognition activated. Try speaking into the microphone.';
         }
 
